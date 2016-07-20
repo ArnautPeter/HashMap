@@ -21,7 +21,7 @@ public class ReadFromFile {
                 for (String tempWord : arr) {
                     if (tempWord.length() < 3)
                         continue;
-                    if (words.get(tempWord) == null) {
+                    if (!words.containsKey(tempWord)) {
                         words.put(tempWord, 1);
                     } else {
                         int value = words.get(tempWord);
